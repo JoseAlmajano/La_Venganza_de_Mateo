@@ -5,7 +5,7 @@ using UnityEngine;
 public class bulletScript : MonoBehaviour
 {
    public float Speed;
-
+    
    private Rigidbody2D Rigidbody2D;
 
     void Start()

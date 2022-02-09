@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovementJonh : MonoBehaviour
 {
+    public GameObject BulletPrefab;
     public float Speed;
     public float JumpForce;
 
@@ -39,11 +40,27 @@ public class MovementJonh : MonoBehaviour
        {
            Jump();
        }
+
+       if(Input.GetKeyDown(KeyCode.Space))
+       {
+           Shoot();
+       }
     }
 
     private void Jump()
     {
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
+    }
+
+    private void Shoot()
+    {
+        Vector3 direction;
+        if(transform.localScale.x ==1.0f) direction = Vector3.right;
+        else direction = Vector3.left;
+
+
+        GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
+        bullet.GetComponent<BulletScript>().SetDirection(direction);
     }
 
     private void FixedUpdate()
