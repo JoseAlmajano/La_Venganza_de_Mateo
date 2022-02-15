@@ -7,7 +7,7 @@ public class GruntScript : MonoBehaviour
     public Transform John;
     public GameObject BulletPrefab;
 
-    private int Health = 3;
+    public int Health = 1;
     private float LastShoot;
 
     void Update()
@@ -20,7 +20,7 @@ public class GruntScript : MonoBehaviour
 
         float distance = Mathf.Abs(John.position.x - transform.position.x);
 
-        if (distance < 1.0f && Time.time > LastShoot + 0.25f)
+        if (distance < 1.0f && Time.time > LastShoot + 1f)
         {
             Shoot();
             LastShoot = Time.time;
@@ -36,7 +36,7 @@ public class GruntScript : MonoBehaviour
 
     public void Hit()
     {
-        Health -= 1;
+        Health -= 5;
         if (Health == 0) Destroy(gameObject);
     }
 }

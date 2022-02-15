@@ -13,7 +13,7 @@ public class MovementJonh : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private float LastShoot;
-    private int Health = 5;
+    public int Health = 5;
 
     private void Start()
     {
@@ -46,7 +46,7 @@ public class MovementJonh : MonoBehaviour
         }
 
         // Disparar
-        if (Input.GetKey(KeyCode.Space) && Time.time > LastShoot + 0.25f)
+        if (Input.GetKey(KeyCode.Space) && Time.time > LastShoot + 0.15f)
         {
             Shoot();
             LastShoot = Time.time;
