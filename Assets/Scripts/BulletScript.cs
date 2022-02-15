@@ -1,5 +1,3 @@
-
-   
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +6,6 @@ public class BulletScript : MonoBehaviour
 {
     public float Speed;
     public AudioClip Sound;
-
     private Rigidbody2D Rigidbody2D;
     private Vector3 Direction;
 

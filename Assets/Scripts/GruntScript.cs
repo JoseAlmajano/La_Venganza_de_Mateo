@@ -29,14 +29,10 @@ public class GruntScript : MonoBehaviour
 
     private void Shoot()
     {
-        Vector3 direction;
-        if (transform.localScale.x == 1.0f) direction = Vector3.right;
-        else direction = Vector3.left;
-Debug.Log(direction);
+        Vector3 direction = new Vector3(transform.localScale.x, 0.0f, 0.0f);
         GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         bullet.GetComponent<BulletScript>().SetDirection(direction);
     }
-
 
     public void Hit()
     {
