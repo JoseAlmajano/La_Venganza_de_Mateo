@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class GruntScript : MonoBehaviour
 {
-    public Transform John;
+     public Transform John;
+
     public GameObject BulletPrefab;
 
-    public int Health = 1;
+    private int Health = 2;
     private float LastShoot;
 
     void Update()
@@ -20,7 +21,7 @@ public class GruntScript : MonoBehaviour
 
         float distance = Mathf.Abs(John.position.x - transform.position.x);
 
-        if (distance < 1.0f && Time.time > LastShoot + 1f)
+        if (distance < 1.0f && Time.time > LastShoot + 0.25f)
         {
             Shoot();
             LastShoot = Time.time;
@@ -36,7 +37,7 @@ public class GruntScript : MonoBehaviour
 
     public void Hit()
     {
-        Health -= 5;
+        Health -= 1;
         if (Health == 0) Destroy(gameObject);
     }
 }
