@@ -8,6 +8,7 @@ public class JonhMovement2 : MonoBehaviour
     public AudioClip JumpSound;
     public float JumpForce;
     public GameObject BulletPrefab;
+    public  Vector3 initPosition;
 
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
@@ -80,4 +81,10 @@ public class JonhMovement2 : MonoBehaviour
         Health -= 1;
         if (Health == 0) Destroy(gameObject);
     }
+
+     public void resetPosition(){
+        this.transform.position = initPosition;
+    }
+
+    
 }

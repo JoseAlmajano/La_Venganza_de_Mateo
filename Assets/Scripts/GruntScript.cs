@@ -8,7 +8,7 @@ public class GruntScript : MonoBehaviour
 
     public GameObject BulletPrefab;
 
-    private int Health = 2;
+    private int Health = 3;
     private float LastShoot;
 
     void Update()
