@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JonhMovement2 : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class JonhMovement2 : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private float LastShoot;
-    private int Health = 5;
+    public int Health = 5;
 
     private void Start()
     {
@@ -79,7 +80,12 @@ public class JonhMovement2 : MonoBehaviour
     public void Hit()
     {
         Health -= 1;
-        if (Health == 0) Destroy(gameObject);
+        if (Health == 0){
+           Destroy(gameObject);
+           resetPosition();
+           SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        
     }
 
      public void resetPosition(){

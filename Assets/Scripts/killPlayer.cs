@@ -1,21 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class killPlayer : MonoBehaviour
 
 {
-    JonhMovement2 jm;
-    private void OnTriggerEnter2D(Collision2D collision)
+    public JonhMovement2 jm;
+    private void OnTriggerEnter2D(Collider2D collider)
     {
 
-         if(collision.gameObject.CompareTag("Player")){
-             Destroy(gameObject);
+         if(collider.gameObject.CompareTag("Player")){
+             
              jm.resetPosition();
-
+                Destroy(collider.gameObject);
+                SceneManager.LoadScene("scene2");
         }
     
     }
+   
+
    
     
 }

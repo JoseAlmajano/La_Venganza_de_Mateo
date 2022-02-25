@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6040938581657596478}
   m_Layer: 0
   m_Name: John
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,4 @@ MonoBehaviour:
   JumpSound: {fileID: 8300000, guid: 9ba2ad0d9b8e47b48b18697c1dd2a220, type: 3}
   JumpForce: 150
   BulletPrefab: {fileID: 8081008192820650602, guid: 41982f58fc2918a4e9e9237f86ad932b, type: 3}
+  initPosition: {x: 0, y: 0, z: 0}
