@@ -49,9 +49,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\killPlayer.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
+     <Compile Include="Assets\Scripts\final.cs" />
      <Compile Include="Assets\Scripts\GruntScript.cs" />
      <Compile Include="Assets\Scripts\ButtonManager.cs" />
      <Compile Include="Assets\Scripts\JonhMovement2.cs" />
+     <Compile Include="Assets\Scripts\cambiarScene.cs" />
      <Compile Include="Assets\Scripts\BulletScript.cs" />
      <Compile Include="Assets\Scripts\JonhMovement.cs" />
  <Reference Include="UnityEngine">
